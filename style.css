@@ -1,0 +1,42 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  --width: 50px;
+  width: var(--width);
+  height: calc(var(--width) - 10px);
+  border: 2px solid blue;
+  cursor: pointer;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+section[data-pages] {
+  display: flex;
+  gap: 16px;
+}
+
+.page {
+  width: 50px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  background: lightcyan;
+  border-radius: 10px;
+  font-size: 20px;
+  transition: all 500ms ease-in-out;
+}
+
+.current-page {
+  transform: scale(1.25);
+  background: darkblue;
+  color: lightcyan;
+}
